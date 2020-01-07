@@ -152,8 +152,6 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
   - Channel: 输入图片的输入通道
   - Curve: 输入通道的输出曲线
 
-*批处理模式下(Batch Mode Window)，会根据参数设置直接对当前选中的图片进行处理（使用前请自行备份相关资源）*
-
 ![EZTextureChannelModifier](.SamplePicture/EZTextureChannelModifier.png)
 
 ## EZTextureCombiner

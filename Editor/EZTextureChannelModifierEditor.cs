@@ -76,16 +76,5 @@ namespace EZhex1991.EZTextureProcessor
             EditorGUILayout.PropertyField(curve, GUIContent.none, GUILayout.MaxWidth(fieldWidth * 3));
             EditorGUILayout.EndHorizontal();
         }
-        protected override void DrawGenerateSettings()
-        {
-            base.DrawGenerateSettings();
-            EditorGUILayout.Space();
-            if (GUILayout.Button("Open Modifier Window (Batch Mode)"))
-            {
-                var window = EditorWindow.GetWindow<EZTextureChannelModifierWindow>("Texture Channel Modifier");
-                window.modifier = target as EZTextureChannelModifier;
-                window.Show();
-            }
-        }
     }
 }
