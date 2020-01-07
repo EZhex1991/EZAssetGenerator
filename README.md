@@ -1,8 +1,32 @@
 # EZTextureProcessor
 
-参数化图片处理工具
+参数化图片处理工具(Asset/Create/EZTextureProcessor/...)
 
-输出设置：（注：输出格式的修改不会影响导入格式）
+- 图片生成
+  - [EZGaussianLutGenerator](#EZGaussianLutGenerator): 高斯查找表
+  - [EZGradient1DTextureGenerator](#EZGradient1DTextureGenerator): 渐变生成图片
+  - [EZGradient2DTextureGenerator](#EZGradient2DTextureGenerator): 坐标运算+渐变
+  - [EZWaveTextureGenerator](#EZWaveTextureGenerator): 波浪图形
+  - [EZPerlinNoiseTextureGenerator](#EZPerlinNoiseTextureGenerator): 柏林噪声
+  - [EZPixelNoiseTextureGenerator](#EZPixelNoiseTextureGenerator): 随机噪点
+  - [EZSimpleNoiseTextureGenerator](#EZSimpleNoiseTextureGenerator): 普通连续噪声
+  - [EZVoronoiTextureGenerator](#EZVoronoiTextureGenerator): 泰森多边形（冯洛诺伊图）
+
+- 图片处理（部分shader可直接用于后处理）
+  - [EZTextureBlurProcessor](#EZTextureBlurProcessor): 模糊（配合高斯查找表做高斯模糊）
+  - [EZColorBasedOutline](#EZColorBasedOutline): 基于色彩容差的图片描边
+  - [EZTextureSpherize](#EZTextureSpherize): 球面化处理
+  - [EZTextureTwirl](#EZTextureTwirl): 漩涡扭曲处理
+  - [EZTextureChannelModifier](#EZTextureChannelModifier): 图片通道调整（交换通道、提取单通道、调整特定通道曲线）
+  - [EZTextureCombiner](#EZTextureCombiner): 图片拼合
+
+- 通用（自定义）
+  - [EZMaterialToTexture](#EZMaterialToTexture): 材质直接输出图片（不要使用依赖光照的Shader！！！）
+  - [EZTexturePipeline](#EZTexturePipeline): 图片处理管线，多个图片处理会按顺序执行
+
+
+
+## 通用输出设置：（注：输出格式的修改不会影响导入格式）
 
 - Output Resolution: 输出图片的分辨率
 - Output Format: 输出图片的通道格式
