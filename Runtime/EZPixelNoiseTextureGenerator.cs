@@ -13,8 +13,19 @@ namespace EZhex1991.EZTextureProcessor
     {
         public int randomSeed = 17685;
         public bool colored;
+
         [EZCurveRect]
         public AnimationCurve outputCurve = AnimationCurve.Linear(0, 0, 1, 1);
+
+        [EZCurveRect]
+        public AnimationCurve outputCurveR = AnimationCurve.Linear(0, 0, 1, 1);
+        [EZCurveRect]
+        public AnimationCurve outputCurveG = AnimationCurve.Linear(0, 0, 1, 1);
+        [EZCurveRect]
+        public AnimationCurve outputCurveB = AnimationCurve.Linear(0, 0, 1, 1);
+        [EZCurveRect]
+        public AnimationCurve outputCurveA = AnimationCurve.Linear(0, 0, 1, 1);
+
 
         public override void SetTexturePixels(Texture2D texture)
         {
@@ -28,10 +39,10 @@ namespace EZhex1991.EZTextureProcessor
                     Color color = Color.white;
                     if (colored)
                     {
-                        color.r = outputCurve.Evaluate(Random.value);
-                        color.g = outputCurve.Evaluate(Random.value);
-                        color.b = outputCurve.Evaluate(Random.value);
-                        color.a = outputCurve.Evaluate(Random.value);
+                        color.r = outputCurveR.Evaluate(Random.value);
+                        color.g = outputCurveG.Evaluate(Random.value);
+                        color.b = outputCurveB.Evaluate(Random.value);
+                        color.a = outputCurveA.Evaluate(Random.value);
                     }
                     else
                     {
