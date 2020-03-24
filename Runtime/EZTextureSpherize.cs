@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace EZhex1991.EZTextureProcessor
 {
-    [CreateAssetMenu(fileName = nameof(EZTextureSpherize),
-        menuName = MenuName_TextureProcessor + nameof(EZTextureSpherize))]
+    [CreateAssetMenu(
+        fileName = nameof(EZTextureSpherize),
+        menuName = MenuName_TextureProcessor + nameof(EZTextureSpherize)
+    )]
     public class EZTextureSpherize : EZTextureProcessor
     {
         private static class Uniforms

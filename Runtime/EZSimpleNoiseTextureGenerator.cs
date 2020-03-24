@@ -9,7 +9,8 @@ namespace EZhex1991.EZTextureProcessor
 {
     [CreateAssetMenu(
         fileName = nameof(EZSimpleNoiseTextureGenerator),
-        menuName = MenuName_TextureGenerator + nameof(EZSimpleNoiseTextureGenerator))]
+        menuName = MenuName_TextureGenerator + nameof(EZSimpleNoiseTextureGenerator)
+    )]
     public class EZSimpleNoiseTextureGenerator : EZTextureProcessor
     {
         private static class Uniforms

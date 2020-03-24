@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace EZhex1991.EZTextureProcessor
 {
-    [CreateAssetMenu(fileName = nameof(EZTextureBlurProcessor),
-        menuName = MenuName_TextureProcessor + nameof(EZTextureBlurProcessor))]
+    [CreateAssetMenu(
+        fileName = nameof(EZTextureBlurProcessor),
+        menuName = MenuName_TextureProcessor + nameof(EZTextureBlurProcessor)
+    )]
     public class EZTextureBlurProcessor : EZTextureProcessor
     {
         private static class Uniforms

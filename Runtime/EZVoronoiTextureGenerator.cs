@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace EZhex1991.EZTextureProcessor
 {
-    [CreateAssetMenu(fileName = nameof(EZVoronoiTextureGenerator),
-        menuName = MenuName_TextureGenerator + nameof(EZVoronoiTextureGenerator))]
+    [CreateAssetMenu(
+        fileName = nameof(EZVoronoiTextureGenerator),
+        menuName = MenuName_TextureGenerator + nameof(EZVoronoiTextureGenerator)
+    )]
     public class EZVoronoiTextureGenerator : EZTextureProcessor
     {
         private static class Uniforms

@@ -9,7 +9,8 @@ namespace EZhex1991.EZTextureProcessor
 {
     [CreateAssetMenu(
         fileName = nameof(EZMaterialToTexture),
-        menuName = "EZUnity/" + nameof(EZMaterialToTexture))]
+        menuName = "EZUnity/" + nameof(EZMaterialToTexture)
+    )]
     public class EZMaterialToTexture : EZTextureProcessor
     {
         public override string defaultShaderName { get { return ""; } }

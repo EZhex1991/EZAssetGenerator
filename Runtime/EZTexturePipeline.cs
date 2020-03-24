@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace EZhex1991.EZTextureProcessor
 {
-    [CreateAssetMenu(fileName = nameof(EZTexturePipeline),
-        menuName = MenuName_TextureProcessor + nameof(EZTexturePipeline))]
+    [CreateAssetMenu(
+        fileName = nameof(EZTexturePipeline),
+        menuName = MenuName_TextureProcessor + nameof(EZTexturePipeline)
+    )]
     public class EZTexturePipeline : EZTextureGenerator
     {
         public EZTextureGenerator[] textureProcessors;

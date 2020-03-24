@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace EZhex1991.EZTextureProcessor
 {
-    [CreateAssetMenu(fileName = nameof(EZGaussianLutGenerator),
-        menuName = MenuName_TextureGenerator + nameof(EZGaussianLutGenerator))]
+    [CreateAssetMenu(
+        fileName = nameof(EZGaussianLutGenerator),
+        menuName = MenuName_TextureGenerator + nameof(EZGaussianLutGenerator)
+    )]
     public class EZGaussianLutGenerator : EZTextureProcessor
     {
         private static class Uniforms

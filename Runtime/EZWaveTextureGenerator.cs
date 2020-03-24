@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace EZhex1991.EZTextureProcessor
 {
-    [CreateAssetMenu(fileName = nameof(EZWaveTextureGenerator),
-        menuName = MenuName_TextureGenerator + nameof(EZWaveTextureGenerator))]
+    [CreateAssetMenu(
+        fileName = nameof(EZWaveTextureGenerator),
+        menuName = MenuName_TextureGenerator + nameof(EZWaveTextureGenerator)
+    )]
     public class EZWaveTextureGenerator : EZTextureGenerator
     {
         public enum Antialiasing { None, X2, X4 }

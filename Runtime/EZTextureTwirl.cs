@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace EZhex1991.EZTextureProcessor
 {
-    [CreateAssetMenu(fileName = nameof(EZTextureTwirl),
-        menuName = MenuName_TextureProcessor + nameof(EZTextureTwirl))]
+    [CreateAssetMenu(
+        fileName = nameof(EZTextureTwirl),
+        menuName = MenuName_TextureProcessor + nameof(EZTextureTwirl)
+    )]
     public class EZTextureTwirl : EZTextureProcessor
     {
         private static class Uniforms

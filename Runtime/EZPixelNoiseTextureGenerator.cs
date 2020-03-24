@@ -7,8 +7,10 @@ using UnityEngine;
 
 namespace EZhex1991.EZTextureProcessor
 {
-    [CreateAssetMenu(fileName = nameof(EZPixelNoiseTextureGenerator),
-        menuName = MenuName_TextureGenerator + nameof(EZPixelNoiseTextureGenerator))]
+    [CreateAssetMenu(
+        fileName = nameof(EZPixelNoiseTextureGenerator),
+        menuName = MenuName_TextureGenerator + nameof(EZPixelNoiseTextureGenerator)
+    )]
     public class EZPixelNoiseTextureGenerator : EZTextureGenerator
     {
         public int randomSeed = 17685;
