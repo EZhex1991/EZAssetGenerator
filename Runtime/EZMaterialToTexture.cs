@@ -9,7 +9,7 @@ namespace EZhex1991.EZTextureProcessor
 {
     [CreateAssetMenu(
         fileName = nameof(EZMaterialToTexture),
-        menuName = "EZUnity/" + nameof(EZMaterialToTexture)
+        menuName = nameof(EZTextureProcessor) + nameof(EZMaterialToTexture)
     )]
     public class EZMaterialToTexture : EZTextureProcessor
     {
