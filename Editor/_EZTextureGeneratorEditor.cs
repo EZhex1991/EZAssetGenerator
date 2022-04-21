@@ -123,7 +123,7 @@ namespace EZhex1991.EZTextureProcessor
         }
         public override void DrawPreview(Rect previewArea)
         {
-            EditorGUI.DrawPreviewTexture(previewArea, previewTexture, null, generator.previewScaleMode);
+            EditorGUI.DrawTextureTransparent(previewArea, previewTexture, generator.previewScaleMode);
         }
 
         protected virtual void RefreshPreview(bool checkResolution)
@@ -133,6 +133,7 @@ namespace EZhex1991.EZTextureProcessor
                 if (previewTexture.width != generator.previewResolution.x || previewTexture.height != generator.previewResolution.y)
                 {
                     previewTexture = new Texture2D(generator.previewResolution.x, generator.previewResolution.y, TextureFormat.RGBA32, false);
+                    previewTexture.alphaIsTransparency = true;
                 }
             }
             RefreshPreview();
