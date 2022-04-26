@@ -9,6 +9,8 @@ namespace EZhex1991.EZAssetGenerator
 {
     public abstract class EZTextureProcessor : EZTextureGenerator
     {
+        public const string MenuName_TextureProcessor = nameof(EZAssetGenerator) + "/";
+
         [SerializeField]
         protected Shader m_Shader;
         public Shader shader

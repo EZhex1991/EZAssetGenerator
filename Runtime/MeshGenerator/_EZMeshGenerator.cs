@@ -9,6 +9,8 @@ namespace EZhex1991.EZAssetGenerator
 {
     public abstract class EZMeshGenerator : ScriptableObject
     {
+        public const string MenuName_MeshGenerator = nameof(EZAssetGenerator) + "/";
+
         // Do not store multi meshes in one generator, lag could occur
         [SerializeField]
         private Mesh m_Mesh;

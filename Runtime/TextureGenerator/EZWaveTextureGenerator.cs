@@ -9,7 +9,8 @@ namespace EZhex1991.EZAssetGenerator
 {
     [CreateAssetMenu(
         fileName = nameof(EZWaveTextureGenerator),
-        menuName = MenuName_TextureGenerator + nameof(EZWaveTextureGenerator)
+        menuName = MenuName_TextureGenerator + nameof(EZWaveTextureGenerator),
+        order = (int)EZAssetMenuOrder.EZWaveTextureGenerator
     )]
     public class EZWaveTextureGenerator : EZTextureGenerator
     {

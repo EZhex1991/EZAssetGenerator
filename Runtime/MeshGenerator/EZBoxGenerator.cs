@@ -7,8 +7,12 @@ using UnityEngine;
 
 namespace EZhex1991.EZAssetGenerator
 {
-    [CreateAssetMenu(fileName = nameof(EZCubeGenerator), menuName = nameof(EZMeshGenerator) + "/" + nameof(EZCubeGenerator))]
-    public class EZCubeGenerator : EZMeshGenerator
+    [CreateAssetMenu(
+        fileName = nameof(EZBoxGenerator),
+        menuName = MenuName_MeshGenerator + nameof(EZBoxGenerator),
+        order = (int)EZAssetMenuOrder.EZBoxGenerator
+        )]
+    public class EZBoxGenerator : EZMeshGenerator
     {
         // hug lag would occur with big numbers
         private const int MAX_SUBDIVISION = 256;
@@ -33,7 +37,7 @@ namespace EZhex1991.EZAssetGenerator
 
         public override string GetMeshName()
         {
-            return string.Format("{0}_{1}x{2}x{3}", nameof(EZCubeGenerator), subdivision.x, subdivision.y, subdivision.z);
+            return string.Format("{0}_{1}x{2}x{3}", nameof(EZBoxGenerator), subdivision.x, subdivision.y, subdivision.z);
         }
 
         public override Mesh GenerateMesh()

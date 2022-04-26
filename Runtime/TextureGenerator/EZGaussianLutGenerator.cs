@@ -9,7 +9,8 @@ namespace EZhex1991.EZAssetGenerator
 {
     [CreateAssetMenu(
         fileName = nameof(EZGaussianLutGenerator),
-        menuName = MenuName_TextureGenerator + nameof(EZGaussianLutGenerator)
+        menuName = MenuName_TextureGenerator + nameof(EZGaussianLutGenerator),
+        order = (int)EZAssetMenuOrder.EZGaussianLutGenerator
     )]
     public class EZGaussianLutGenerator : EZTextureProcessor
     {

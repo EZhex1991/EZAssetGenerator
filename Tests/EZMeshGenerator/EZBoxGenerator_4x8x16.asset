@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7958c26b95600ea49a19a896b2fecce3, type: 3}
-  m_Name: EZCubeGenerator_4x8x16
+  m_Name: EZBoxGenerator_4x8x16
   m_EditorClassIdentifier: 
   m_Mesh: {fileID: 43340694860445974}
   m_Subdivision: {x: 4, y: 8, z: 16}
@@ -21,7 +21,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: EZCubeGenerator_4x8x16
+  m_Name: EZBoxGenerator_4x8x16
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2

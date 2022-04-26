@@ -7,7 +7,11 @@ using UnityEngine;
 
 namespace EZhex1991.EZAssetGenerator
 {
-    [CreateAssetMenu(fileName = nameof(EZUVSphereGenerator), menuName = nameof(EZMeshGenerator) + "/" + nameof(EZUVSphereGenerator))]
+    [CreateAssetMenu(
+        fileName = nameof(EZUVSphereGenerator),
+        menuName = MenuName_MeshGenerator + nameof(EZUVSphereGenerator),
+        order = (int)EZAssetMenuOrder.EZUVSphereGenerator
+        )]
     public class EZUVSphereGenerator : EZMeshGenerator
     {
         // hug lag would occur with big numbers

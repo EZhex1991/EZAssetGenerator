@@ -9,7 +9,8 @@ namespace EZhex1991.EZAssetGenerator
 {
     [CreateAssetMenu(
         fileName = nameof(EZGradient1DTextureGenerator),
-        menuName = MenuName_TextureGenerator + nameof(EZGradient1DTextureGenerator)
+        menuName = MenuName_TextureGenerator + nameof(EZGradient1DTextureGenerator),
+        order = (int)EZAssetMenuOrder.EZGradient1DTextureGenerator
     )]
     public class EZGradient1DTextureGenerator : EZTextureGenerator
     {

@@ -8,7 +8,11 @@ using UnityEngine;
 
 namespace EZhex1991.EZAssetGenerator
 {
-    [CreateAssetMenu(fileName = nameof(EZPlaneGenerator), menuName = nameof(EZMeshGenerator) + "/" + nameof(EZPlaneGenerator))]
+    [CreateAssetMenu(
+        fileName = nameof(EZPlaneGenerator),
+        menuName = MenuName_MeshGenerator + nameof(EZPlaneGenerator),
+        order = (int)EZAssetMenuOrder.EZPlaneGenerator
+        )]
     public class EZPlaneGenerator : EZMeshGenerator
     {
         // hug lag would occur with big numbers

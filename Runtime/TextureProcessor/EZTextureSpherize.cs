@@ -9,7 +9,8 @@ namespace EZhex1991.EZAssetGenerator
 {
     [CreateAssetMenu(
         fileName = nameof(EZTextureSpherize),
-        menuName = MenuName_TextureProcessor + nameof(EZTextureSpherize)
+        menuName = MenuName_TextureProcessor + nameof(EZTextureSpherize),
+        order = (int)EZAssetMenuOrder.EZTextureSpherize
     )]
     public class EZTextureSpherize : EZTextureProcessor
     {
