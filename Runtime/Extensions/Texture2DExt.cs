@@ -5,7 +5,7 @@
  */
 using UnityEngine;
 
-namespace EZhex1991.EZTextureProcessor
+namespace EZhex1991.EZAssetGenerator
 {
     public enum TextureEncoding { PNG, JPG, TGA }
 

@@ -1,0 +1,16 @@
+{
+    "name": "EZhex1991.EZAssetGenerator.Editor",
+    "references": [
+        "EZhex1991.EZAssetGenerator"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

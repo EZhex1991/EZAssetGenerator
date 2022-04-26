@@ -6,7 +6,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace EZhex1991.EZTextureProcessor
+namespace EZhex1991.EZAssetGenerator
 {
     [CustomEditor(typeof(EZTextureProcessor), true)]
     public class EZTextureProcessorEditor : EZTextureGeneratorEditor

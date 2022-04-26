@@ -7,7 +7,7 @@ using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
 
-namespace EZhex1991.EZTextureProcessor
+namespace EZhex1991.EZAssetGenerator
 {
     [CustomEditor(typeof(EZTexturePipeline))]
     public class EZTexturePipelineEditor : EZTextureGeneratorEditor

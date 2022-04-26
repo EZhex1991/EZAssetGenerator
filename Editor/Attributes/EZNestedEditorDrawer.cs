@@ -6,7 +6,7 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace EZhex1991.EZTextureProcessor
+namespace EZhex1991.EZAssetGenerator
 {
     [CustomPropertyDrawer(typeof(EZNestedEditorAttribute))]
     public class EZNestedEditorDrawer : PropertyDrawer

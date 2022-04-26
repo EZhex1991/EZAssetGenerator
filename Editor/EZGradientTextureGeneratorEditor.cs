@@ -5,7 +5,7 @@
  */
 using UnityEditor;
 
-namespace EZhex1991.EZTextureProcessor
+namespace EZhex1991.EZAssetGenerator
 {
     [CustomEditor(typeof(EZGradient2DTextureGenerator))]
     public class EZGradient2DTextureGeneratorEditor : EZTextureGeneratorEditor
