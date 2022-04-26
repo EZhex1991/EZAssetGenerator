@@ -1,8 +1,18 @@
-# EZTextureProcessor
+# EZAssetGenerator
+
+## EZMeshGenerator
+
+参数化Mesh生成工具(Asset/Create/EZMeshGenerator/...)
+
+- EZPlaneGenerator: 生成带细分的平面
+- EZBoxGenerator: 生成带细分及圆角的长方体
+- EZUVSphereGenerator: 生成带细分的UV球
+
+## EZTextureProcessor
 
 参数化图片处理工具(Asset/Create/EZTextureProcessor/...)
 
-- 图片生成
+- 图片生成(EZTextureGenerator)
   - [EZGaussianLutGenerator](#EZGaussianLutGenerator): 高斯查找表
   - [EZGradient1DTextureGenerator](#EZGradient1DTextureGenerator): 渐变生成图片
   - [EZGradient2DTextureGenerator](#EZGradient2DTextureGenerator): 坐标运算+渐变
@@ -12,7 +22,7 @@
   - [EZSimpleNoiseTextureGenerator](#EZSimpleNoiseTextureGenerator): 普通连续噪声
   - [EZVoronoiTextureGenerator](#EZVoronoiTextureGenerator): 泰森多边形（冯洛诺伊图）
 
-- 图片处理（部分shader可直接用于后处理）
+- 图片处理（EZTextureProcessor，部分shader可直接用于后处理）
   - [EZTextureBlurProcessor](#EZTextureBlurProcessor): 模糊（配合高斯查找表做高斯模糊）
   - [EZColorBasedOutline](#EZColorBasedOutline): 基于色彩容差的图片描边
   - [EZTextureSpherize](#EZTextureSpherize): 球面化处理
