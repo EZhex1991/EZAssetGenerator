@@ -8,11 +8,9 @@ using UnityEngine;
 
 namespace EZhex1991.EZAssetGenerator
 {
-    [CustomEditor(typeof(EZTextureGenerator), true)]
-    public class EZTextureGeneratorEditor : Editor
+    public abstract class EZTextureGeneratorBaseEditor : Editor
     {
-        protected EZTextureGenerator generator;
-        protected Texture2D previewTexture;
+        protected EZTextureGeneratorBase generator;
 
         protected SerializedProperty m_OutputResolution;
         protected SerializedProperty m_OutputFormat;
@@ -21,10 +19,9 @@ namespace EZhex1991.EZAssetGenerator
 
         protected SerializedProperty m_CorrespondingGenerator;
 
-        protected void OnEnable()
+        protected virtual void OnEnable()
         {
-            generator = target as EZTextureGenerator;
-            previewTexture = new Texture2D(generator.previewResolution.x, generator.previewResolution.y);
+            generator = target as EZTextureGeneratorBase;
             m_OutputResolution = serializedObject.FindProperty("m_OutputResolution");
             m_OutputFormat = serializedObject.FindProperty("m_OutputFormat");
             m_OutputEncoding = serializedObject.FindProperty("m_OutputEncoding");
@@ -65,7 +62,8 @@ namespace EZhex1991.EZAssetGenerator
             bool inputChanged = EditorGUI.EndChangeCheck();
             if (GUILayout.Button("Refresh Preview"))
             {
-                RefreshPreview(true);
+                CheckPreviewResolution();
+                RefreshPreview();
             }
 
             EditorGUILayout.Space();
@@ -109,7 +107,7 @@ namespace EZhex1991.EZAssetGenerator
             EditorGUILayout.PropertyField(m_CorrespondingGenerator);
             if (GUILayout.Button("Generate"))
             {
-                generator.GenerateTexture(new System.Collections.Generic.HashSet<EZTextureGenerator>());
+                generator.GenerateTexture(new System.Collections.Generic.HashSet<EZTextureGeneratorBase>());
             }
             if (GUILayout.Button("Generate (No Correspondings)"))
             {
@@ -117,32 +115,17 @@ namespace EZhex1991.EZAssetGenerator
             }
         }
 
-        public sealed override bool HasPreviewGUI()
+        public override bool HasPreviewGUI()
         {
             return true;
         }
-        public override void DrawPreview(Rect previewArea)
+        protected virtual void CheckPreviewResolution()
         {
-            EditorGUI.DrawTextureTransparent(previewArea, previewTexture, generator.previewScaleMode);
-        }
 
-        protected virtual void RefreshPreview(bool checkResolution)
-        {
-            if (checkResolution)
-            {
-                if (previewTexture.width != generator.previewResolution.x || previewTexture.height != generator.previewResolution.y)
-                {
-                    previewTexture = new Texture2D(generator.previewResolution.x, generator.previewResolution.y, TextureFormat.RGBA32, false);
-                    previewTexture.alphaIsTransparency = true;
-                }
-            }
-            RefreshPreview();
         }
         protected virtual void RefreshPreview()
         {
-            generator.SetTexturePixels(previewTexture);
-            previewTexture.Apply();
-            Repaint();
+
         }
     }
 }

@@ -7,10 +7,8 @@ using UnityEngine;
 
 namespace EZhex1991.EZAssetGenerator
 {
-    public abstract class EZTextureProcessor : EZTextureGenerator
+    public abstract class EZTextureGeneratorRender : EZTextureGeneratorBase
     {
-        public const string MenuName_TextureProcessor = nameof(EZAssetGenerator) + "/";
-
         [SerializeField]
         protected Shader m_Shader;
         public Shader shader

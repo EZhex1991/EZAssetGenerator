@@ -9,8 +9,9 @@ using UnityEngine;
 namespace EZhex1991.EZAssetGenerator
 {
     [CustomEditor(typeof(EZTextureCombiner))]
-    public class EZTextureCombinerEditor : EZTextureGeneratorEditor
+    public class EZTextureCombinerEditor : EZTextureGeneratorRenderEditor
     {
+        private SerializedProperty m_Background;
         private SerializedProperty m_CellSize;
         private SerializedProperty m_InputTextures;
         private SerializedProperty[,] inputTextures = new SerializedProperty[6, 6];
@@ -18,6 +19,7 @@ namespace EZhex1991.EZAssetGenerator
         protected override void GetInputProperties()
         {
             base.GetInputProperties();
+            m_Background = serializedObject.FindProperty(nameof(m_Background));
             m_CellSize = serializedObject.FindProperty("cellSize");
             m_InputTextures = serializedObject.FindProperty("inputTextures");
             for (int x = 0; x < 6; x++)
@@ -31,7 +33,11 @@ namespace EZhex1991.EZAssetGenerator
         }
         protected override void DrawInputSettings()
         {
+            GUI.enabled = false;
+            EditorGUILayout.PropertyField(m_Shader);
+            GUI.enabled = true;
             EditorGUI.BeginChangeCheck();
+            EditorGUILayout.PropertyField(m_Background);
             EditorGUILayout.PropertyField(m_CellSize);
             Vector2Int cellSize = m_CellSize.vector2IntValue;
             if (EditorGUI.EndChangeCheck())

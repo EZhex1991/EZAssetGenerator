@@ -12,7 +12,7 @@ namespace EZhex1991.EZAssetGenerator
         menuName = MenuName_TextureGenerator + nameof(EZMaterialToTexture),
         order = (int)EZAssetMenuOrder.EZMaterialToTexture
     )]
-    public class EZMaterialToTexture : EZTextureProcessor
+    public class EZMaterialToTexture : EZTextureGeneratorRender
     {
         public override string defaultShaderName { get { return ""; } }
 

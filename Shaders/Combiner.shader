@@ -6,7 +6,7 @@
 Shader "Hidden/EZTextureProcessor/Combiner" {
 	Properties {
 		_MainTex ("Main Texture", 2D) = "white" {}
-		_AddTex ("Add Texture", 2D) = "white" {}
+		_AddTex ("Add Texture", 2D) = "black" {}
 	}
 	SubShader {
 		Tags { "RenderType" = "Opaque" }
@@ -44,7 +44,7 @@ Shader "Hidden/EZTextureProcessor/Combiner" {
 				half4 mainColor = tex2D(_MainTex, i.uv_MainTex);
 				half4 addColor = tex2D(_AddTex, i.uv_AddTex);
 				fixed s = step(0, i.uv_AddTex.x) * step(0, i.uv_AddTex.y) * step(i.uv_AddTex.x, 1) * step(i.uv_AddTex.y, 1);
-				half4 color = lerp(mainColor, addColor, s);
+				half4 color = lerp(mainColor, addColor, s * addColor.a);
 				return color;
 			}
 			ENDCG

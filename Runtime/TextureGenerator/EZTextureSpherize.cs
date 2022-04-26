@@ -1,5 +1,5 @@
 /* Author:          ezhex1991@outlook.com
- * CreateTime:      2019-09-02 17:43:21
+ * CreateTime:      2019-09-02 17:04:08
  * Organization:    #ORGANIZATION#
  * Description:     
  */
@@ -8,19 +8,20 @@ using UnityEngine;
 namespace EZhex1991.EZAssetGenerator
 {
     [CreateAssetMenu(
-        fileName = nameof(EZTextureTwirl),
-        menuName = MenuName_TextureProcessor + nameof(EZTextureTwirl),
+        fileName = nameof(EZTextureSpherize),
+        menuName = MenuName_TextureGenerator + nameof(EZTextureSpherize),
         order = (int)EZAssetMenuOrder.EZTextureSpherize
     )]
-    public class EZTextureTwirl : EZTextureProcessor
+    public class EZTextureSpherize : EZTextureGeneratorRender
     {
         private static class Uniforms
         {
-            public static readonly int PropertyID_TwirlCenter = Shader.PropertyToID("_TwirlCenter");
-            public static readonly int PropertyID_TwirlStrength = Shader.PropertyToID("_TwirlStrength");
+            public static readonly int PropertyID_SpherizePower = Shader.PropertyToID("_SpherizePower");
+            public static readonly int PropertyID_SpherizeCenter = Shader.PropertyToID("_SpherizeCenter");
+            public static readonly int PropertyID_SpherizeStrength = Shader.PropertyToID("_SpherizeStrength");
         }
 
-        public override string defaultShaderName { get { return "Hidden/EZTextureProcessor/Distort_Twirl"; } }
+        public override string defaultShaderName { get { return "Hidden/EZTextureProcessor/Distort_Spherize"; } }
 
         [SerializeField]
         protected Texture m_InputTexture;
@@ -40,15 +41,17 @@ namespace EZhex1991.EZAssetGenerator
             }
         }
 
-        public Vector2 twirlCenter = new Vector2(0.5f, 0.5f);
-        public float twirlStrength = 10f;
+        public float spherizePower = 4;
+        public Vector2 spherizeCenter = new Vector2(0.5f, 0.5f);
+        public Vector2 spherizeStrength = new Vector2(10, 10);
 
         public override void ProcessTexture(Texture sourceTexture, RenderTexture destinationTexture)
         {
             if (material != null)
             {
-                material.SetVector(Uniforms.PropertyID_TwirlCenter, twirlCenter);
-                material.SetFloat(Uniforms.PropertyID_TwirlStrength, twirlStrength);
+                material.SetFloat(Uniforms.PropertyID_SpherizePower, spherizePower);
+                material.SetVector(Uniforms.PropertyID_SpherizeCenter, spherizeCenter);
+                material.SetVector(Uniforms.PropertyID_SpherizeStrength, spherizeStrength);
                 Graphics.Blit(sourceTexture, destinationTexture, material);
             }
             else

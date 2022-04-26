@@ -12,7 +12,7 @@ namespace EZhex1991.EZAssetGenerator
         menuName = MenuName_TextureGenerator + nameof(EZGradient1DTextureGenerator),
         order = (int)EZAssetMenuOrder.EZGradient1DTextureGenerator
     )]
-    public class EZGradient1DTextureGenerator : EZTextureGenerator
+    public class EZGradient1DTextureGenerator : EZTextureGeneratorPixel
     {
         public Gradient gradient = GradientExt.BlackToWhite();
         [EZCurveRect]

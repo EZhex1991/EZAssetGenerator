@@ -9,7 +9,7 @@ using UnityEngine;
 namespace EZhex1991.EZAssetGenerator
 {
     [CustomEditor(typeof(EZGaussianLutGenerator))]
-    public class EZGaussianLutGeneratorEditor : EZTextureProcessorEditor
+    public class EZGaussianLutGeneratorEditor : EZTextureGeneratorRenderEditor
     {
         protected SerializedProperty m_TextureType;
         protected SerializedProperty m_RangeX;

@@ -12,7 +12,7 @@ namespace EZhex1991.EZAssetGenerator
         menuName = MenuName_TextureGenerator + nameof(EZGradient2DTextureGenerator),
         order = (int)EZAssetMenuOrder.EZGradient2DTextureGenerator
     )]
-    public class EZGradient2DTextureGenerator : EZTextureGenerator
+    public class EZGradient2DTextureGenerator : EZTextureGeneratorPixel
     {
         public enum CoordinateMode
         {

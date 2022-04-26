@@ -58,16 +58,20 @@ Shader "Hidden/EZTextureProcessor/GaussianDistribution" {
 			}
 			half4 frag (v2f i) : SV_Target {
 				float x = lerp(_GaussianRangeX.x, _GaussianRangeX.y, i.uv_MainTex.x);
+				half4 color;
 				#if _GAUSSIANTEXTURETYPE_WAVE
-					return step(Gaussian1D(x, _GaussianSigmaX), i.uv_MainTex.y);
+					color = step(Gaussian1D(x, _GaussianSigmaX), i.uv_MainTex.y);
 				#elif _GAUSSIANTEXTURETYPE_LUT1D
-					return Gaussian1D(x, _GaussianSigmaX);
+					color = Gaussian1D(x, _GaussianSigmaX);
 				#elif _GAUSSIANTEXTURETYPE_LUT2D
 					float y = lerp(_GaussianRangeY.x, _GaussianRangeY.y, i.uv_MainTex.y);
-					return Gaussian1D(x, _GaussianSigmaX) * Gaussian1D(y, _GaussianSigmaY);
+					color = Gaussian1D(x, _GaussianSigmaX) * Gaussian1D(y, _GaussianSigmaY);
 				#else
-					return step(Gaussian1D(x, _GaussianSigmaX), i.uv_MainTex.y);
+					color = step(Gaussian1D(x, _GaussianSigmaX), i.uv_MainTex.y);
 				#endif
+
+				color.a = 1;
+				return color;
 			}
 			ENDCG
 		}

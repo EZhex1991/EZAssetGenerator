@@ -10,15 +10,15 @@ using UnityEngine;
 namespace EZhex1991.EZAssetGenerator
 {
     [CustomEditor(typeof(EZTexturePipeline))]
-    public class EZTexturePipelineEditor : EZTextureGeneratorEditor
+    public class EZTexturePipelineEditor : EZTextureGeneratorPixelEditor
     {
-        protected SerializedProperty m_TextureProcessors;
-        protected ReorderableList textureProcessorList;
+        protected SerializedProperty m_TextureGenerators;
+        protected ReorderableList textureGeneratorList;
 
         protected override void GetInputProperties()
         {
-            m_TextureProcessors = serializedObject.FindProperty("textureProcessors");
-            textureProcessorList = new ReorderableList(serializedObject, m_TextureProcessors)
+            m_TextureGenerators = serializedObject.FindProperty(nameof(m_TextureGenerators));
+            textureGeneratorList = new ReorderableList(serializedObject, m_TextureGenerators)
             {
                 drawHeaderCallback = DrawProcessorListHeader,
                 drawElementCallback = DrawProcessorListElement,
@@ -26,16 +26,16 @@ namespace EZhex1991.EZAssetGenerator
         }
         protected override void DrawInputSettings()
         {
-            textureProcessorList.DoLayoutList();
+            textureGeneratorList.DoLayoutList();
         }
 
         private void DrawProcessorListHeader(Rect rect)
         {
-            EditorGUI.LabelField(rect, m_TextureProcessors.displayName);
+            EditorGUI.LabelField(rect, m_TextureGenerators.displayName);
         }
         private void DrawProcessorListElement(Rect rect, int index, bool isActive, bool isFocused)
         {
-            SerializedProperty element = m_TextureProcessors.GetArrayElementAtIndex(index);
+            SerializedProperty element = m_TextureGenerators.GetArrayElementAtIndex(index);
             EditorGUI.PropertyField(new Rect(rect) { height = EditorGUIUtility.singleLineHeight }, element);
         }
     }

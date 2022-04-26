@@ -8,7 +8,7 @@ using UnityEditor;
 namespace EZhex1991.EZAssetGenerator
 {
     [CustomEditor(typeof(EZPixelNoiseTextureGenerator))]
-    public class EZPixelNoiseTextureGeneratorEditor : EZTextureGeneratorEditor
+    public class EZPixelNoiseTextureGeneratorEditor : EZTextureGeneratorPixelEditor
     {
         private SerializedProperty m_RandomSeed;
         private SerializedProperty m_Colored;

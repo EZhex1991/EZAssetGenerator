@@ -12,7 +12,7 @@ namespace EZhex1991.EZAssetGenerator
         menuName = MenuName_TextureGenerator + nameof(EZSimpleNoiseTextureGenerator),
         order = (int)EZAssetMenuOrder.EZSimpleNoiseTextureGenerator
     )]
-    public class EZSimpleNoiseTextureGenerator : EZTextureProcessor
+    public class EZSimpleNoiseTextureGenerator : EZTextureGeneratorRender
     {
         private static class Uniforms
         {

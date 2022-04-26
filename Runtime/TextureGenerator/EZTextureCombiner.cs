@@ -9,10 +9,10 @@ namespace EZhex1991.EZAssetGenerator
 {
     [CreateAssetMenu(
         fileName = nameof(EZTextureCombiner),
-        menuName = MenuName_TextureProcessor + nameof(EZTextureCombiner),
+        menuName = MenuName_TextureGenerator + nameof(EZTextureCombiner),
         order = (int)EZAssetMenuOrder.EZTextureCombiner
     )]
-    public class EZTextureCombiner : EZTextureProcessor
+    public class EZTextureCombiner : EZTextureGeneratorRender
     {
         private static class Uniforms
         {
@@ -22,7 +22,9 @@ namespace EZhex1991.EZAssetGenerator
 
         public override string defaultShaderName { get { return Uniforms.ShaderName; } }
 
-        public override Texture inputTexture { get { return Texture2DExt.white; } }
+
+        public Texture m_Background;
+        public override Texture inputTexture { get { return m_Background == null ? Texture2DExt.white : m_Background; } }
 
         [System.NonSerialized]
         protected Material m_Material;
@@ -37,7 +39,6 @@ namespace EZhex1991.EZAssetGenerator
                 return m_Material;
             }
         }
-
         public Vector2Int cellSize = new Vector2Int(2, 2);
         public Texture2D[] inputTextures = new Texture2D[36];
 
@@ -46,7 +47,7 @@ namespace EZhex1991.EZAssetGenerator
             if (material != null)
             {
                 RenderTexture lastTexture = RenderTexture.GetTemporary(destinationTexture.width, destinationTexture.height);
-                Graphics.Blit(inputTexture, lastTexture, material);
+                Graphics.Blit(inputTexture, lastTexture);
                 for (int i = 0; i < cellSize.x; i++)
                 {
                     for (int j = 0; j < cellSize.y; j++)
@@ -60,7 +61,7 @@ namespace EZhex1991.EZAssetGenerator
                         lastTexture = tempTexture;
                     }
                 }
-                Graphics.Blit(lastTexture, destinationTexture, material);
+                Graphics.Blit(lastTexture, destinationTexture);
                 RenderTexture.ReleaseTemporary(lastTexture);
             }
             else

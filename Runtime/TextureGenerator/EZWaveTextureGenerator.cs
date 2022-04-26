@@ -12,7 +12,7 @@ namespace EZhex1991.EZAssetGenerator
         menuName = MenuName_TextureGenerator + nameof(EZWaveTextureGenerator),
         order = (int)EZAssetMenuOrder.EZWaveTextureGenerator
     )]
-    public class EZWaveTextureGenerator : EZTextureGenerator
+    public class EZWaveTextureGenerator : EZTextureGeneratorPixel
     {
         public enum Antialiasing { None, X2, X4 }
 

@@ -12,7 +12,7 @@ namespace EZhex1991.EZAssetGenerator
         menuName = MenuName_TextureGenerator + nameof(EZPerlinNoiseTextureGenerator),
         order = (int)EZAssetMenuOrder.EZPerlinNoiseTextureGenerator
     )]
-    public class EZPerlinNoiseTextureGenerator : EZTextureProcessor
+    public class EZPerlinNoiseTextureGenerator : EZTextureGeneratorRender
     {
         private static class Uniforms
         {

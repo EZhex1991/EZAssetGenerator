@@ -12,7 +12,7 @@ namespace EZhex1991.EZAssetGenerator
         menuName = MenuName_TextureGenerator + nameof(EZGaussianLutGenerator),
         order = (int)EZAssetMenuOrder.EZGaussianLutGenerator
     )]
-    public class EZGaussianLutGenerator : EZTextureProcessor
+    public class EZGaussianLutGenerator : EZTextureGeneratorRender
     {
         private static class Uniforms
         {

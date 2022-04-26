@@ -76,8 +76,8 @@ Shader "Hidden/EZTextureProcessor/Noise_Voronoi" {
 				return o;
 			}
 			half4 frag (v2f i) : SV_Target {
-				half4 color = VoronoiValue(i.uv_MainTex, _VoronoiAngleOffset, _VoronoiDensity);
-				return color;
+				half value = VoronoiValue(i.uv_MainTex, _VoronoiAngleOffset, _VoronoiDensity);
+				return half4(value, value, value, 1);
 			}
 			ENDCG
 		}

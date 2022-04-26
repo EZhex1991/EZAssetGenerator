@@ -8,7 +8,7 @@ using UnityEditor;
 namespace EZhex1991.EZAssetGenerator
 {
     [CustomEditor(typeof(EZGradient2DTextureGenerator))]
-    public class EZGradient2DTextureGeneratorEditor : EZTextureGeneratorEditor
+    public class EZGradient2DTextureGeneratorEditor : EZTextureGeneratorPixelEditor
     {
         protected SerializedProperty m_Gradient;
         protected SerializedProperty m_GradientCurve;

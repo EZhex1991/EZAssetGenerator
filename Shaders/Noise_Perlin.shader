@@ -59,8 +59,8 @@ Shader "Hidden/EZTextureProcessor/Noise_Perlin" {
 				return o;
 			}
 			half4 frag (v2f i) : SV_Target {
-				half4 color = NoiseValue(i.uv_MainTex, _NoiseDensity);
-				return color;
+				half value = NoiseValue(i.uv_MainTex, _NoiseDensity);
+				return half4(value, value, value, 1);
 			}
 			ENDCG
 		}

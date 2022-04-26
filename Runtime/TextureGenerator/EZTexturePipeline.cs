@@ -12,18 +12,19 @@ namespace EZhex1991.EZAssetGenerator
         menuName = MenuName_TextureGenerator + nameof(EZTexturePipeline),
         order = (int)EZAssetMenuOrder.EZTexturePipeline
     )]
-    public class EZTexturePipeline : EZTextureGenerator
+    public class EZTexturePipeline : EZTextureGeneratorBase
     {
-        public EZTextureGenerator[] textureProcessors;
+        public EZTextureGeneratorBase[] m_TextureGenerators;
+        public EZTextureGeneratorBase[] textureGenerators { get { return m_TextureGenerators; } }
 
         public override bool previewAutoUpdate { get { return false; } }
 
         public override void SetTexturePixels(Texture2D texture)
         {
-            for (int i = 0; i < textureProcessors.Length; i++)
+            for (int i = 0; i < textureGenerators.Length; i++)
             {
-                if (textureProcessors[i] == null) continue;
-                textureProcessors[i].SetTexturePixels(texture);
+                if (textureGenerators[i] == null) continue;
+                textureGenerators[i].SetTexturePixels(texture);
             }
         }
     }

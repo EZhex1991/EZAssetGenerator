@@ -9,7 +9,7 @@ using UnityEngine;
 namespace EZhex1991.EZAssetGenerator
 {
     [CustomEditor(typeof(EZTextureChannelModifier))]
-    public class EZTextureChannelModifierEditor : EZTextureGeneratorEditor
+    public class EZTextureChannelModifierEditor : EZTextureGeneratorRenderEditor
     {
         private SerializedProperty m_InputTexture;
         private SerializedProperty m_OutputCurve;
@@ -29,6 +29,7 @@ namespace EZhex1991.EZAssetGenerator
 
         protected override void GetInputProperties()
         {
+            base.GetInputProperties();
             m_InputTexture = serializedObject.FindProperty("m_InputTexture");
             m_OutputCurve = serializedObject.FindProperty("outputCurve");
 
@@ -50,6 +51,9 @@ namespace EZhex1991.EZAssetGenerator
         }
         protected override void DrawInputSettings()
         {
+            GUI.enabled = false;
+            EditorGUILayout.PropertyField(m_Shader);
+            GUI.enabled = true;
             EditorGUI.BeginChangeCheck();
             EditorGUILayout.BeginHorizontal();
             float fieldWidth = (EditorGUIUtility.currentViewWidth - EditorGUIUtility.labelWidth) * 0.1f;

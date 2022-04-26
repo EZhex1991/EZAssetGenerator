@@ -61,11 +61,12 @@ Shader "Hidden/EZTextureProcessor/Noise_Simple" {
 				return o;
 			}
 			half4 frag (v2f i) : SV_Target {
-				float value = 0;
+				half value = 0;
 				value += NoiseValue(i.uv_MainTex * _NoiseDensity);
 				value += NoiseValue(i.uv_MainTex * _NoiseDensity / 2) * 2;
 				value += NoiseValue(i.uv_MainTex * _NoiseDensity / 4) * 4;
-				return value / 7;
+				value /= 7;
+				return half4(value, value, value, 1);
 			}
 			ENDCG
 		}

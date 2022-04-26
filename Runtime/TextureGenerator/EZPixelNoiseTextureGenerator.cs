@@ -12,7 +12,7 @@ namespace EZhex1991.EZAssetGenerator
         menuName = MenuName_TextureGenerator + nameof(EZPixelNoiseTextureGenerator),
         order = (int)EZAssetMenuOrder.EZPixelNoiseTextureGenerator
     )]
-    public class EZPixelNoiseTextureGenerator : EZTextureGenerator
+    public class EZPixelNoiseTextureGenerator : EZTextureGeneratorPixel
     {
         public int randomSeed = 17685;
         public bool colored;

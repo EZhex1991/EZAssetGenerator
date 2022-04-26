@@ -13,7 +13,7 @@ using UnityEditor;
 
 namespace EZhex1991.EZAssetGenerator
 {
-    public abstract class EZTextureGenerator : ScriptableObject
+    public abstract class EZTextureGeneratorBase : ScriptableObject
     {
         public const string MenuName_TextureGenerator = nameof(EZAssetGenerator) + "/";
 
@@ -31,8 +31,8 @@ namespace EZhex1991.EZAssetGenerator
         public Texture2D outputTexture { get { return m_OutputTexture; } set { m_OutputTexture = value; } }
 
         [SerializeField]
-        protected EZTextureGenerator m_CorrespondingGenerator;
-        public EZTextureGenerator correspondingGenerator { get { return m_CorrespondingGenerator; } }
+        protected EZTextureGeneratorBase m_CorrespondingGenerator;
+        public EZTextureGeneratorBase correspondingGenerator { get { return m_CorrespondingGenerator; } }
 
         public virtual bool previewAutoUpdate { get { return true; } }
         public virtual Vector2Int previewResolution { get { return new Vector2Int(128, 128); } }
@@ -58,7 +58,7 @@ namespace EZhex1991.EZAssetGenerator
         }
 
 #if UNITY_EDITOR
-        public void GenerateTexture(HashSet<EZTextureGenerator> generators)
+        public void GenerateTexture(HashSet<EZTextureGeneratorBase> generators)
         {
             GenerateTexture();
             if (generators != null && correspondingGenerator != null)

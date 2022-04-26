@@ -9,10 +9,10 @@ namespace EZhex1991.EZAssetGenerator
 {
     [CreateAssetMenu(
         fileName = nameof(EZTextureBlurProcessor),
-        menuName = MenuName_TextureProcessor + nameof(EZTextureBlurProcessor),
+        menuName = MenuName_TextureGenerator + nameof(EZTextureBlurProcessor),
         order = (int)EZAssetMenuOrder.EZTextureBlurProcessor
     )]
-    public class EZTextureBlurProcessor : EZTextureProcessor
+    public class EZTextureBlurProcessor : EZTextureGeneratorRender
     {
         private static class Uniforms
         {
