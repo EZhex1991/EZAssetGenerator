@@ -1,0 +1,19 @@
+{
+  "name": "ezhex1991.ezassetgenerator",
+  "version": "1.0.0",
+  "displayName": "EZAssetGenerator",
+  "description": "Unity editor tools for generating meshes and processing textures.",
+  "unity": "2020.3",
+  "author": {
+    "name": "EZhex1991",
+    "email": "ezhex1991@outlook.com",
+    "url": "https://github.com/EZhex1991/EZAssetGenerator"
+  },
+  "samples": [
+    {
+      "displayName": "EZAssetGenerator Demo",
+      "description": "Example assets for mesh generation and texture processing.",
+      "path": "Samples~/Demo"
+    }
+  ]
+}

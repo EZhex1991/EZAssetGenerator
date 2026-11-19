@@ -7,22 +7,20 @@ namespace EZhex1991.EZAssetGenerator
 {
     public enum EZAssetMenuOrder
     {
-        _Section_0 = 11000,
-
-        _Section_1 = _Section_0 + 100,
+        _____SECTION_0_____ = 6990,
         EZGradient1DTextureGenerator,
         EZGradient2DTextureGenerator,
         EZGaussianLutGenerator,
         EZWaveTextureGenerator,
         EZMaterialToTexture,
 
-        _Section_2 = _Section_0 + 200,
+        _____SECTION_1_____ = _____SECTION_0_____ + 100,
         EZPerlinNoiseTextureGenerator,
         EZPixelNoiseTextureGenerator,
         EZSimpleNoiseTextureGenerator,
         EZVoronoiTextureGenerator,
 
-        _Section_3 = _Section_0 + 300,
+        _____SECTION_2_____ = _____SECTION_0_____ + 200,
         EZTextureBlurProcessor,
         EZTextureSpherize,
         EZTextureTwirl,
@@ -30,19 +28,10 @@ namespace EZhex1991.EZAssetGenerator
         EZTextureCombiner,
         EZTexturePipeline,
 
-        _Section_4 = _Section_0 + 400,
+        _____SECTION_3_____ = _____SECTION_0_____ + 300,
         EZPlaneGenerator,
         EZBoxGenerator,
         EZUVSphereGenerator,
 
-        _Section_5 = _Section_0 + 500,
-
-        _Section_6 = _Section_0 + 600,
-
-        _Section_7 = _Section_0 + 700,
-
-        _Section_8 = _Section_0 + 800,
-
-        _Section_9 = _Section_0 + 900,
     }
 }

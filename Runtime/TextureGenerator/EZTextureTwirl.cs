@@ -10,7 +10,7 @@ namespace EZhex1991.EZAssetGenerator
     [CreateAssetMenu(
         fileName = nameof(EZTextureTwirl),
         menuName = MenuName_TextureGenerator + nameof(EZTextureTwirl),
-        order = (int)EZAssetMenuOrder.EZTextureSpherize
+        order = (int)EZAssetMenuOrder.EZTextureTwirl
     )]
     public class EZTextureTwirl : EZTextureGeneratorRender
     {

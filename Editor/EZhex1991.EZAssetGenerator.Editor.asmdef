@@ -1,5 +1,6 @@
 {
     "name": "EZhex1991.EZAssetGenerator.Editor",
+    "rootNamespace": "EZhex1991.EZAssetGenerator",
     "references": [
         "EZhex1991.EZAssetGenerator"
     ],

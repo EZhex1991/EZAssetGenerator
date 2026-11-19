@@ -1,5 +1,11 @@
 # EZAssetGenerator
 
+[English](README_EN.md)
+
+EZAssetGenerator 提供用于创建网格、生成纹理和处理纹理的 Unity 编辑器工具。
+
+最低支持 Unity 版本：2020.3。
+
 ## EZMeshGenerator
 
 参数化Mesh生成工具(Asset/Create/EZAssetGenerator/...)
@@ -38,15 +44,15 @@
 
 ### EZPlaneGenerator
 
-![EZPlaneGenerator](.SamplePicture/EZPlaneGenerator.jpg)
+![EZPlaneGenerator](Documentation~/Images/EZPlaneGenerator.jpg)
 
 ### EZBoxGenerator
 
-![EZBoxGenerator](.SamplePicture/EZBoxGenerator.jpg)
+![EZBoxGenerator](Documentation~/Images/EZBoxGenerator.jpg)
 
 ### EZUVSphereGenerator
 
-![EZUVSphereGenerator](.SamplePicture/EZUVSphereGenerator.jpg)
+![EZUVSphereGenerator](Documentation~/Images/EZUVSphereGenerator.jpg)
 
 ## EZTextureProcessorSamples
 
@@ -69,7 +75,7 @@
 - Range: 取值范围
 - Sigma: 标准差
 
-![EZGaussianLutGenerator](.SamplePicture/EZGaussianLutGenerator.png)
+![EZGaussianLutGenerator](Documentation~/Images/EZGaussianLutGenerator.png)
 
 ### EZGradient1DTextureGenerator
 
@@ -78,7 +84,7 @@ U方向，做Gradient的映射
 - Gradient: 渐变
 - Gradient Curve: 渐变曲线
 
-![EZGradient1DTextureGenerator](.SamplePicture/EZGradient1DTextureGenerator.png)
+![EZGradient1DTextureGenerator](Documentation~/Images/EZGradient1DTextureGenerator.png)
 
 ### EZGradient2DTextureGenerator
 
@@ -97,7 +103,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 - Coordinate Curve U: U坐标变化曲线
 - Coordinate Curve V: V坐标变化曲线
 
-![EZGradient2DTextureGenerator](.SamplePicture/EZGradient2DTextureGenerator.png)
+![EZGradient2DTextureGenerator](Documentation~/Images/EZGradient2DTextureGenerator.png)
 
 ### EZPerlinNoiseTextureGenerator
 
@@ -105,7 +111,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 
 - Noise Density: 噪声密度
 
-![EZPerlinNoiseTextureGenerator](.SamplePicture/EZPerlinNoiseTextureGenerator.png)
+![EZPerlinNoiseTextureGenerator](Documentation~/Images/EZPerlinNoiseTextureGenerator.png)
 
 ### EZPixelNoiseTextureGenerator
 
@@ -115,7 +121,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 - Colored: 带色噪点
 - Output Curve: 输出曲线（可用来控制噪点密度）
 
-![EZPixelNoiseTextureGenerator](.SamplePicture/EZPixelNoiseTextureGenerator.png)
+![EZPixelNoiseTextureGenerator](Documentation~/Images/EZPixelNoiseTextureGenerator.png)
 
 ### EZSimpleNoiseTextureGenerator
 
@@ -123,7 +129,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 
 - Noise Density: 噪声密度
 
-![EZSimpleNoiseTextureGenerator](.SamplePicture/EZSimpleNoiseTextureGenerator.png)
+![EZSimpleNoiseTextureGenerator](Documentation~/Images/EZSimpleNoiseTextureGenerator.png)
 
 ### EZVoronoiTextureGenerator
 
@@ -135,7 +141,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 - Angle Offset: 随机向量的生成种子
 - Voronoi Density: 噪声密度
 
-![EZVoronoiTextureGenerator](.SamplePicture/EZVoronoiTextureGenerator.png)
+![EZVoronoiTextureGenerator](Documentation~/Images/EZVoronoiTextureGenerator.png)
 
 ### EZWaveTextureGenerator
 
@@ -144,7 +150,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 - Wave Shape: 波浪形状曲线
 - Antialiasing: 抗锯齿
 
-![EZWaveTextureGenerator](.SamplePicture/EZWaveTextureGenerator.png)
+![EZWaveTextureGenerator](Documentation~/Images/EZWaveTextureGenerator.png)
 
 ### EZTextureBlurProcessor
 
@@ -154,7 +160,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 - Blur Weight Texture: 模糊使用的权重查找表
 - Blur Radius: 模糊范围
 
-![EZTextureBlurProcessor](.SamplePicture/EZTextureBlurProcessor.png)
+![EZTextureBlurProcessor](Documentation~/Images/EZTextureBlurProcessor.png)
 
 ### EZColorBasedOutline
 
@@ -166,7 +172,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 - Outline Color: 描边颜色
 - Outline Thickness: 边缘检查的范围（描边粗细）
 
-![EZColorBasedOutline](.SamplePicture/EZColorBasedOutline.png)
+![EZColorBasedOutline](Documentation~/Images/EZColorBasedOutline.png)
 
 ### EZTextureSpherize
 
@@ -177,7 +183,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 - Spherize Center: 球面化中心
 - Spherize Strength: 球面化范围
 
-![EZTextureSpherize](.SamplePicture/EZTextureSpherize.png)
+![EZTextureSpherize](Documentation~/Images/EZTextureSpherize.png)
 
 ### EZTextureTwirl
 
@@ -187,7 +193,7 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 - Twirl Center: 扭曲中心
 - Twirl Strength: 扭曲强度
 
-![EZTextureTwirl](.SamplePicture/EZTextureTwirl.png)
+![EZTextureTwirl](Documentation~/Images/EZTextureTwirl.png)
 
 ### EZTextureChannelModifier
 
@@ -200,13 +206,13 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
   - Channel: 输入图片的输入通道
   - Curve: 输入通道的输出曲线
 
-![EZTextureChannelModifier](.SamplePicture/EZTextureChannelModifier.png)
+![EZTextureChannelModifier](Documentation~/Images/EZTextureChannelModifier.png)
 
 ### EZTextureCombiner
 
 整合图片，小图的尺寸需要相同
 
-![EZTextureCombiner](.SamplePicture/EZTextureCombiner.png)
+![EZTextureCombiner](Documentation~/Images/EZTextureCombiner.png)
 
 ### EZMaterialToTexture
 
@@ -215,3 +221,28 @@ UV方向的取值到Gradient的映射，配合UV曲线可以生成很多复杂�
 ### EZTexturePipeline
 
 图片处理管线，多个图片处理会按顺序执行（与CorrespondingGenerator不同，管线不会生成中间图片）
+
+## 使用方式
+
+通过以下菜单创建网格生成器、纹理生成器或纹理处理器资产：
+
+`Assets/Create/EZAssetGenerator/...`
+
+示例资产可以在 **Window > Package Manager > EZAssetGenerator > Samples** 中导入。
+
+## 目录结构
+
+```text
+EZAssetGenerator/
+├── Runtime/              运行时资产和纹理生成组件
+├── Editor/               自定义检视面板和编辑器预览
+├── Shaders/              纹理处理器使用的 Shader
+├── Samples~/Demo/        网格生成和纹理处理示例资产
+├── Documentation~/Images 文档中使用的功能图片
+├── package.json          Unity Package Manager 包信息
+├── README.md             中文说明
+├── README_EN.md          English documentation
+├── CHANGELOG.md          版本变更记录
+└── LICENSE               MIT 许可证
+```
+
