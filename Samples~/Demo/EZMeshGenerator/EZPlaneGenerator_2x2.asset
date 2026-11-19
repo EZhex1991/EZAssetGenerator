@@ -21,7 +21,7 @@ Mesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: EZPlaneGenerator_2x2
-  serializedVersion: 9
+  serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
     firstByte: 0
@@ -41,6 +41,9 @@ Mesh:
   m_BindPose: []
   m_BoneNameHashes: 
   m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
   m_MeshCompression: 0
   m_IsReadable: 1
   m_KeepVertices: 1
@@ -48,7 +51,7 @@ Mesh:
   m_IndexFormat: 0
   m_IndexBuffer: 000003000100010003000400010004000200020004000500030006000400040006000700040007000500050007000800
   m_VertexData:
-    serializedVersion: 2
+    serializedVersion: 3
     m_VertexCount: 9
     m_Channels:
     - stream: 0
@@ -169,7 +172,7 @@ Mesh:
   m_BakedTriangleCollisionMesh: 
   m_MeshMetrics[0]: 1
   m_MeshMetrics[1]: 1
-  m_MeshOptimized: 0
+  m_MeshOptimizationFlags: 1
   m_StreamData:
     offset: 0
     size: 0
