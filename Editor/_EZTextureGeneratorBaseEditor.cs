@@ -78,13 +78,6 @@ namespace EZhex1991.EZAssetGenerator
             EditorGUILayout.PropertyField(m_OutputResolution);
             EditorGUILayout.PropertyField(m_OutputFormat);
             EditorGUILayout.PropertyField(m_OutputEncoding);
-#if !UNITY_2018_3_OR_NEWER
-            if (m_OutputEncoding.intValue == (int)TextureEncoding.TGA)
-            {
-                Debug.LogWarning("TGA encoding is not supported on Unity2018.2 or earlier version, PNG encoding will be used");
-                m_OutputEncoding.intValue = (int)TextureEncoding.PNG;
-            }
-#endif
 
             EditorGUILayout.BeginHorizontal();
             EditorGUILayout.PropertyField(m_OutputTexture);

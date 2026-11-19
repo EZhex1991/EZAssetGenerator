@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.1] - 2026-11-19
+
+### Removed
+
+- Removed Unity 2018.2 and earlier compatibility branches for TGA texture encoding.
+
 ## [1.0.0] - 2026-11-19
 
 ### Added
