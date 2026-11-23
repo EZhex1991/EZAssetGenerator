@@ -2,6 +2,9 @@
  * CreateTime:      2019-07-18 15:41:57
  * Organization:    #ORGANIZATION#
  * Description:     
+ * Source:           Assets/EZhex1991/EZUnity/Editor/Common/Attributes/EZNestedEditorDrawer.cs
+ * Note:             This file is a complete copy kept by the independent package and does not depend on EZUnity assemblies.
+ * Sync:             Modify the source file first, then synchronize changes to this file.
  */
 using UnityEditor;
 using UnityEngine;
@@ -16,24 +19,31 @@ namespace EZhex1991.EZAssetGenerator
         public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
         {
             EditorGUI.BeginProperty(position, label, property);
-            EditorGUI.PropertyField(position, property, label, true);
-            if (property.objectReferenceValue != null)
+            if (property.hasMultipleDifferentValues)
             {
-                property.isExpanded = EditorGUI.Foldout(new Rect(position) { width = 0 }, property.isExpanded, GUIContent.none);
-                if (property.isExpanded)
+                EditorGUI.PropertyField(position, property, label);
+            }
+            else
+            {
+                EditorGUI.PropertyField(position, property, label, true);
+                if (property.objectReferenceValue != null)
                 {
-                    EditorGUI.indentLevel++;
-                    if (property.type == "PPtr<$Material>")
+                    property.isExpanded = EditorGUI.Foldout(new Rect(position) { width = 0 }, property.isExpanded, GUIContent.none);
+                    if (property.isExpanded)
                     {
-                        Editor.CreateCachedEditor(property.objectReferenceValue, typeof(MaterialEditor), ref nestedEditor);
-                        (nestedEditor as MaterialEditor).PropertiesGUI();
+                        EditorGUI.indentLevel++;
+                        if (property.type == "PPtr<$Material>")
+                        {
+                            Editor.CreateCachedEditor(property.objectReferenceValue, typeof(MaterialEditor), ref nestedEditor);
+                            (nestedEditor as MaterialEditor).PropertiesGUI();
+                        }
+                        else
+                        {
+                            Editor.CreateCachedEditor(property.objectReferenceValue, null, ref nestedEditor);
+                            nestedEditor.OnInspectorGUI();
+                        }
+                        EditorGUI.indentLevel--;
                     }
-                    else
-                    {
-                        Editor.CreateCachedEditor(property.objectReferenceValue, null, ref nestedEditor);
-                        nestedEditor.OnInspectorGUI();
-                    }
-                    EditorGUI.indentLevel--;
                 }
             }
             EditorGUI.EndProperty();

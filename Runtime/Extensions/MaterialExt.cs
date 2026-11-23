@@ -2,6 +2,9 @@
  * CreateTime:      2019-11-28 15:39:16
  * Organization:    #ORGANIZATION#
  * Description:     
+ * Source:           Assets/EZhex1991/EZUnity/Runtime/Common/Extensions/MaterialExt.cs
+ * Note:             This file is a complete copy kept by the independent package and does not depend on EZUnity assemblies.
+ * Sync:             Modify the source file first, then synchronize changes to this file.
  */
 using System;
 using UnityEngine;
